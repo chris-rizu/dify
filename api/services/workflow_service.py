@@ -19,11 +19,10 @@ from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecution, WorkflowNodeExecutionStatus
 from core.workflow.errors import WorkflowNodeRunFailedError
-from core.workflow.graph_engine.entities.event import InNodeEvent
+from core.workflow.events import InNodeEvent, NodeEvent, RunCompletedEvent
 from core.workflow.nodes import NodeType
 from core.workflow.nodes.base.node import BaseNode
 from core.workflow.nodes.enums import ErrorStrategy
-from core.workflow.nodes.event import NodeEvent, RunCompletedEvent
 from core.workflow.nodes.node_mapping import LATEST_VERSION, NODE_TYPE_CLASSES_MAPPING
 from core.workflow.nodes.start.entities import StartNodeData
 from core.workflow.system_variable import SystemVariable

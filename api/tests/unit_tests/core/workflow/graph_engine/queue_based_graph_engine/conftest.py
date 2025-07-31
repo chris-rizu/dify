@@ -3,7 +3,7 @@ import threading
 import time
 from typing import Optional
 
-from core.workflow.graph_engine.entities.event import GraphEngineEvent
+from core.workflow.events import GraphEngineEvent
 from core.workflow.graph_engine.queue_based_graph_engine.entities import Task
 
 

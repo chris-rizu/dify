@@ -3,7 +3,7 @@ from collections.abc import Generator
 from datetime import UTC, datetime
 
 from core.workflow.entities.variable_pool import VariablePool
-from core.workflow.graph_engine.entities.event import (
+from core.workflow.events import (
     GraphEngineEvent,
     NodeRunStartedEvent,
     NodeRunStreamChunkEvent,

@@ -16,17 +16,17 @@ from typing import Any, Optional
 
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.workflow.entities.node_entities import NodeRunResult
-from core.workflow.graph_engine.entities.event import (
+from core.workflow.events import (
     GraphEngineEvent,
     GraphRunFailedEvent,
     GraphRunStartedEvent,
     GraphRunSucceededEvent,
+    RunCompletedEvent,
 )
 from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
 from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.nodes import NodeType
-from core.workflow.nodes.event import RunCompletedEvent
 from core.workflow.nodes.node_mapping import NODE_TYPE_CLASSES_MAPPING
 from models.enums import UserFrom
 from models.workflow import WorkflowType

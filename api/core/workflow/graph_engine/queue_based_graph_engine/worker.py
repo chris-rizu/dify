@@ -10,8 +10,7 @@ import threading
 from collections.abc import Callable, Generator
 from typing import Optional
 
-from core.workflow.graph_engine.entities.event import GraphEngineEvent
-from core.workflow.nodes.event import RunCompletedEvent
+from core.workflow.events import GraphEngineEvent, RunCompletedEvent
 
 from .entities import Task, TaskQueueProtocol
 

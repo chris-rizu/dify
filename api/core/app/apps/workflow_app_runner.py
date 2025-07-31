@@ -30,7 +30,7 @@ from core.app.entities.queue_entities import (
 )
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey
-from core.workflow.graph_engine.entities.event import (
+from core.workflow.events import (
     AgentLogEvent,
     GraphEngineEvent,
     GraphRunFailedEvent,

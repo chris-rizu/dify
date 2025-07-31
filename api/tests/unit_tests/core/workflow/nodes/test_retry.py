@@ -1,4 +1,4 @@
-from core.workflow.graph_engine.entities.event import (
+from core.workflow.events import (
     GraphRunFailedEvent,
     GraphRunPartialSucceededEvent,
     NodeRunRetryEvent,

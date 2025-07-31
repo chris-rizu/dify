@@ -6,9 +6,9 @@ from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
 from core.workflow.events import GraphRunStartedEvent, GraphRunSucceededEvent, RunCompletedEvent
 from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.graph_engine.queue_based_graph_engine import QueueBasedGraphEngine
 from core.workflow.graph_engine.queue_based_graph_engine.entities import Task
+from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 
 from .conftest import MockEventQueue, MockTaskQueue

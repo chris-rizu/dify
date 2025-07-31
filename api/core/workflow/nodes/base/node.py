@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from core.workflow.events import InNodeEvent
     from core.workflow.graph_engine.entities.graph import Graph
     from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
-    from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
+    from core.workflow.runtime_state import GraphRuntimeState
 
 logger = logging.getLogger(__name__)
 

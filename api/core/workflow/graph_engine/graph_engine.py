@@ -43,7 +43,6 @@ from core.workflow.events import (
 from core.workflow.graph_engine.condition_handlers.condition_manager import ConditionManager
 from core.workflow.graph_engine.entities.graph import Graph, GraphEdge
 from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
-from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.graph_engine.entities.runtime_route_state import RouteNodeState
 from core.workflow.nodes import NodeType
 from core.workflow.nodes.agent.agent_node import AgentNode
@@ -53,6 +52,7 @@ from core.workflow.nodes.answer.base_stream_processor import StreamProcessor
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.end.end_stream_processor import EndStreamProcessor
 from core.workflow.nodes.enums import ErrorStrategy, FailBranchSourceHandle
+from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.utils import variable_utils
 from libs.flask_utils import preserve_flask_contexts
 from models.enums import UserFrom

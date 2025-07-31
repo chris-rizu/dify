@@ -21,12 +21,12 @@ from core.workflow.events import (
     RunStreamChunkEvent,
 )
 from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.graph_engine.entities.runtime_route_state import RouteNodeState
 from core.workflow.graph_engine.graph_engine import GraphEngine
 from core.workflow.nodes.code.code_node import CodeNode
 from core.workflow.nodes.llm.node import LLMNode
 from core.workflow.nodes.question_classifier.question_classifier_node import QuestionClassifierNode
+from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 from models.enums import UserFrom
 from models.workflow import WorkflowType

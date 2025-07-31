@@ -25,9 +25,9 @@ from core.workflow.events import (
 )
 from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
-from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.nodes import NodeType
 from core.workflow.nodes.node_mapping import NODE_TYPE_CLASSES_MAPPING
+from core.workflow.runtime_state import GraphRuntimeState
 from models.enums import UserFrom
 from models.workflow import WorkflowType
 

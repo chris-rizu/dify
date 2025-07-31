@@ -13,7 +13,7 @@ from core.variables import (
 )
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
-from core.workflow.graph_engine.entities.event import (
+from core.workflow.events import (
     BaseGraphEvent,
     BaseNodeEvent,
     BaseParallelBranchEvent,
@@ -23,16 +23,17 @@ from core.workflow.graph_engine.entities.event import (
     LoopRunNextEvent,
     LoopRunStartedEvent,
     LoopRunSucceededEvent,
+    NodeEvent,
     NodeRunFailedEvent,
     NodeRunStartedEvent,
     NodeRunStreamChunkEvent,
     NodeRunSucceededEvent,
+    RunCompletedEvent,
 )
 from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.enums import ErrorStrategy, NodeType
-from core.workflow.nodes.event import NodeEvent, RunCompletedEvent
 from core.workflow.nodes.loop.entities import LoopNodeData
 from core.workflow.utils.condition.processor import ConditionProcessor
 from factories.variable_factory import TypeMismatchError, build_segment_with_type

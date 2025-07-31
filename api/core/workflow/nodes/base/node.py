@@ -5,12 +5,12 @@ from typing import TYPE_CHECKING, Any, ClassVar, Optional, Union
 
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.events import NodeEvent, RunCompletedEvent
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.enums import ErrorStrategy, NodeType
-from core.workflow.nodes.event import NodeEvent, RunCompletedEvent
 
 if TYPE_CHECKING:
-    from core.workflow.graph_engine.entities.event import InNodeEvent
+    from core.workflow.events import InNodeEvent
     from core.workflow.graph_engine.entities.graph import Graph
     from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
     from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState

@@ -18,7 +18,7 @@ from core.workflow.entities.node_entities import (
 )
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
-from core.workflow.graph_engine.entities.event import (
+from core.workflow.events import (
     BaseGraphEvent,
     BaseNodeEvent,
     BaseParallelBranchEvent,
@@ -28,17 +28,18 @@ from core.workflow.graph_engine.entities.event import (
     IterationRunNextEvent,
     IterationRunStartedEvent,
     IterationRunSucceededEvent,
+    NodeEvent,
     NodeInIterationFailedEvent,
     NodeRunFailedEvent,
     NodeRunStartedEvent,
     NodeRunStreamChunkEvent,
     NodeRunSucceededEvent,
+    RunCompletedEvent,
 )
 from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.enums import ErrorStrategy, NodeType
-from core.workflow.nodes.event import NodeEvent, RunCompletedEvent
 from core.workflow.nodes.iteration.entities import ErrorHandleMode, IterationNodeData
 from factories.variable_factory import build_segment
 from libs.flask_utils import preserve_flask_contexts

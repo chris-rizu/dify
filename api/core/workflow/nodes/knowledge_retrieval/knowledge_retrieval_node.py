@@ -34,12 +34,12 @@ from core.variables import (
 from core.variables.segments import ArrayObjectSegment
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.events import (
+    ModelInvokeCompletedEvent,
+)
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.enums import ErrorStrategy, NodeType
-from core.workflow.nodes.event import (
-    ModelInvokeCompletedEvent,
-)
 from core.workflow.nodes.knowledge_retrieval.template_prompts import (
     METADATA_FILTER_ASSISTANT_PROMPT_1,
     METADATA_FILTER_ASSISTANT_PROMPT_2,

@@ -1,9 +1,7 @@
-from core.workflow.entities import Graph
-from core.workflow.entities.graph_init_params import GraphInitParams
+from core.workflow.entities import Graph, GraphInitParams, RunCondition
 from core.workflow.graph_engine.condition_handlers.base_handler import RunConditionHandler
 from core.workflow.graph_engine.condition_handlers.branch_identify_handler import BranchIdentifyRunConditionHandler
 from core.workflow.graph_engine.condition_handlers.condition_handler import ConditionRunConditionHandlerHandler
-from core.workflow.graph_engine.entities.run_condition import RunCondition
 
 
 class ConditionManager:

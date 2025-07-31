@@ -5,10 +5,8 @@ from unittest.mock import MagicMock, Mock
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.file import File, FileTransferMethod, FileType
 from core.variables import ArrayFileSegment
-from core.workflow.entities import Graph
-from core.workflow.entities.graph_init_params import GraphInitParams
-from core.workflow.entities.variable_pool import VariablePool
-from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, GraphInitParams, VariablePool, WorkflowNodeExecutionStatus
+from core.workflow.enums import WorkflowType
 from core.workflow.nodes.if_else.entities import IfElseNodeData
 from core.workflow.nodes.if_else.if_else_node import IfElseNode
 from core.workflow.runtime_state import GraphRuntimeState
@@ -16,7 +14,6 @@ from core.workflow.system_variable import SystemVariable
 from core.workflow.utils.condition.entities import Condition, SubCondition, SubVariableCondition
 from extensions.ext_database import db
 from models.enums import UserFrom
-from models.workflow import WorkflowType
 
 
 def test_execute_if_else_result_true():
@@ -243,9 +240,21 @@ def test_array_file_contains_file_name():
         "data": node_data.model_dump(),
     }
 
+    # Create properly configured mock for graph_init_params
+    graph_init_params = Mock()
+    graph_init_params.tenant_id = "test_tenant"
+    graph_init_params.app_id = "test_app"
+    graph_init_params.workflow_type = WorkflowType.WORKFLOW
+    graph_init_params.workflow_id = "test_workflow"
+    graph_init_params.graph_config = {}
+    graph_init_params.user_id = "test_user"
+    graph_init_params.user_from = UserFrom.ACCOUNT
+    graph_init_params.invoke_from = InvokeFrom.SERVICE_API
+    graph_init_params.call_depth = 0
+    
     node = IfElseNode(
         id=str(uuid.uuid4()),
-        graph_init_params=Mock(),
+        graph_init_params=graph_init_params,
         graph=Mock(),
         graph_runtime_state=Mock(),
         config=node_config,

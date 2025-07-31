@@ -5,8 +5,8 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from core.workflow.entities.node_entities import NodeRunResult
-from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from .node_entities import NodeRunResult
+from .workflow_node_execution import WorkflowNodeExecutionStatus
 
 
 class RouteNodeState(BaseModel):

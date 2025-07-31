@@ -43,7 +43,7 @@ from .types import EnumText, StringUUID
 _logger = logging.getLogger(__name__)
 
 
-class WorkflowType(Enum):
+class WorkflowType(StrEnum):
     """
     Workflow Type Enum
     """

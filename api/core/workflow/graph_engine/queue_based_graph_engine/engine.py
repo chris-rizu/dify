@@ -15,9 +15,7 @@ from types import GeneratorType
 from typing import Any, Optional
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.workflow.entities import Graph
-from core.workflow.entities.graph_init_params import GraphInitParams
-from core.workflow.entities.node_entities import NodeRunResult
+from core.workflow.entities import Graph, GraphInitParams, NodeRunResult
 from core.workflow.events import (
     GraphEngineEvent,
     GraphRunFailedEvent,

@@ -50,3 +50,20 @@ class ErrorStrategy(StrEnum):
 class FailBranchSourceHandle(StrEnum):
     FAILED = "fail-branch"
     SUCCESS = "success-branch"
+
+
+class WorkflowType(StrEnum):
+    """
+    Workflow Type Enum for domain layer
+    """
+
+    WORKFLOW = "workflow"
+    CHAT = "chat"
+
+
+class WorkflowExecutionStatus(StrEnum):
+    RUNNING = "running"
+    SUCCEEDED = "succeeded"
+    FAILED = "failed"
+    STOPPED = "stopped"
+    PARTIAL_SUCCEEDED = "partial-succeeded"

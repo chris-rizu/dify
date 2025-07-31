@@ -1,5 +1,6 @@
 import json
 from abc import ABC
+from collections.abc import Sequence
 from enum import StrEnum
 from typing import Any, Optional, Union
 
@@ -7,6 +8,15 @@ from pydantic import BaseModel, model_validator
 
 from core.workflow.enums import ErrorStrategy
 from core.workflow.nodes.base.exc import DefaultValueTypeError
+
+
+class VariableSelector(BaseModel):
+    """
+    Variable Selector.
+    """
+
+    variable: str
+    value_selector: Sequence[str]
 
 
 class DefaultValueType(StrEnum):

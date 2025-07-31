@@ -7,7 +7,7 @@ This module contains the core data structures and protocols used by the queue-ba
 from dataclasses import dataclass
 from typing import Any, Optional, Protocol, TypeVar
 
-from core.workflow.entities.variable_pool import VariablePool
+from core.workflow.entities import VariablePool
 
 T = TypeVar("T")
 

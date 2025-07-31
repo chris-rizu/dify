@@ -11,9 +11,7 @@ from core.variables import (
     Segment,
     SegmentType,
 )
-from core.workflow.entities import Graph
-from core.workflow.entities.node_entities import NodeRunResult
-from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, NodeRunResult, WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
 from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.events import (
     BaseGraphEvent,
@@ -39,7 +37,7 @@ from core.workflow.utils.condition.processor import ConditionProcessor
 from factories.variable_factory import TypeMismatchError, build_segment_with_type
 
 if TYPE_CHECKING:
-    from core.workflow.entities.variable_pool import VariablePool
+    from core.workflow.entities import VariablePool
     from core.workflow.graph_engine.graph_engine import GraphEngine
 
 logger = logging.getLogger(__name__)

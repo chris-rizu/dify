@@ -7,7 +7,7 @@ from enum import Enum, StrEnum
 from typing import TYPE_CHECKING, Any, Literal, Optional, cast
 
 from core.tools.signature import sign_tool_file
-from core.workflow.entities.workflow_execution import WorkflowExecutionStatus
+from core.workflow.enums import WorkflowExecutionStatus
 
 if TYPE_CHECKING:
     from models.workflow import Workflow

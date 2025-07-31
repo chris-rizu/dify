@@ -6,7 +6,7 @@ from pydantic import Field
 
 from core.model_runtime.entities.llm_entities import LLMUsage
 from core.rag.entities.citation_metadata import RetrievalSourceMetadata
-from core.workflow.entities.node_entities import AgentNodeStrategyInit, NodeRunResult
+from core.workflow.entities import AgentNodeStrategyInit, NodeRunResult
 from core.workflow.events.base import BaseNodeEvent, NodeEvent
 
 

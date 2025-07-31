@@ -1,8 +1,7 @@
 from collections.abc import Mapping
 from typing import Any, Optional
 
-from core.workflow.entities.node_entities import NodeRunResult
-from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.entities import NodeRunResult, WorkflowNodeExecutionStatus
 from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig

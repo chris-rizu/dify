@@ -13,12 +13,13 @@ from flask import Flask, current_app
 from configs import dify_config
 from core.variables import ArrayVariable, IntegerVariable, NoneVariable
 from core.variables.segments import ArrayAnySegment, ArraySegment
-from core.workflow.entities import Graph
-from core.workflow.entities.node_entities import (
+from core.workflow.entities import (
+    Graph,
     NodeRunResult,
+    VariablePool,
+    WorkflowNodeExecutionMetadataKey,
+    WorkflowNodeExecutionStatus,
 )
-from core.workflow.entities.variable_pool import VariablePool
-from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
 from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.events import (
     BaseGraphEvent,

@@ -1,8 +1,7 @@
 import logging
 from collections.abc import Generator
 
-from core.workflow.entities import Graph
-from core.workflow.entities.variable_pool import VariablePool
+from core.workflow.entities import Graph, VariablePool
 from core.workflow.events import (
     GraphEngineEvent,
     NodeRunStartedEvent,

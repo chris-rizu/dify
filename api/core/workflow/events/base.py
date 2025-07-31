@@ -3,7 +3,7 @@ from typing import Any, Optional
 
 from pydantic import BaseModel, Field
 
-from core.workflow.entities.route_node_state import RouteNodeState
+from core.workflow.entities import RouteNodeState
 from core.workflow.enums import NodeType
 
 

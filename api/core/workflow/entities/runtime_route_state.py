@@ -2,7 +2,7 @@ from datetime import UTC, datetime
 
 from pydantic import BaseModel, Field
 
-from core.workflow.entities.route_node_state import RouteNodeState
+from .route_node_state import RouteNodeState
 
 
 class RuntimeRouteState(BaseModel):

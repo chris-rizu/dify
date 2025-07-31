@@ -3,8 +3,8 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 from core.model_runtime.entities.llm_entities import LLMUsage
+from core.workflow.entities import RuntimeRouteState
 from core.workflow.entities.variable_pool import VariablePool
-from core.workflow.graph_engine.entities.runtime_route_state import RuntimeRouteState
 
 
 class GraphRuntimeState(BaseModel):

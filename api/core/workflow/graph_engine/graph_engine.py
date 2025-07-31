@@ -646,14 +646,12 @@ class GraphEngine:
                 time.sleep(0.001)
                 event_stream = node.run()
                 for event in event_stream:
-                    if isinstance(event, GraphEngineEvent):
-                        # add parallel info to iteration event
-                        if isinstance(event, BaseIterationEvent | BaseLoopEvent):
-                            event.parallel_id = parallel_id
-                            event.parallel_start_node_id = parallel_start_node_id
-                            event.parent_parallel_id = parent_parallel_id
-                            event.parent_parallel_start_node_id = parent_parallel_start_node_id
-                        yield event
+                    # add parallel info to iteration event
+                    if isinstance(event, BaseIterationEvent | BaseLoopEvent):
+                        event.parallel_id = parallel_id
+                        event.parallel_start_node_id = parallel_start_node_id
+                        event.parent_parallel_id = parent_parallel_id
+                        event.parent_parallel_start_node_id = parent_parallel_start_node_id
                     else:
                         if isinstance(event, RunCompletedEvent):
                             run_result = event.run_result
@@ -797,7 +795,6 @@ class GraphEngine:
                                     node_version=node.version(),
                                 )
                                 should_continue_retry = False
-
                             break
                         elif isinstance(event, RunStreamChunkEvent):
                             yield NodeRunStreamChunkEvent(
@@ -814,6 +811,7 @@ class GraphEngine:
                                 parent_parallel_start_node_id=parent_parallel_start_node_id,
                                 node_version=node.version(),
                             )
+                            continue
                         elif isinstance(event, RunRetrieverResourceEvent):
                             yield NodeRunRetrieverResourceEvent(
                                 id=node.id,
@@ -829,6 +827,8 @@ class GraphEngine:
                                 parent_parallel_start_node_id=parent_parallel_start_node_id,
                                 node_version=node.version(),
                             )
+                            continue
+                    yield event
             except GenerateTaskStoppedError:
                 # trigger node run failed event
                 route_node_state.status = RouteNodeState.Status.FAILED

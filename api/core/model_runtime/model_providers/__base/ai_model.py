@@ -1,7 +1,7 @@
 import decimal
 import hashlib
 from threading import Lock
-from typing import TYPE_CHECKING, Optional
+from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -24,9 +24,7 @@ from core.model_runtime.errors.invoke import (
     InvokeRateLimitError,
     InvokeServerUnavailableError,
 )
-
-if TYPE_CHECKING:
-    from core.plugin.entities.plugin_daemon import PluginModelProviderEntity
+from core.plugin.entities.plugin_daemon import PluginModelProviderEntity
 
 
 class AIModel(BaseModel):
@@ -38,7 +36,7 @@ class AIModel(BaseModel):
     model_type: ModelType = Field(description="Model type")
     plugin_id: str = Field(description="Plugin ID")
     provider_name: str = Field(description="Provider")
-    plugin_model_provider: "PluginModelProviderEntity" = Field(description="Plugin model provider")
+    plugin_model_provider: PluginModelProviderEntity = Field(description="Plugin model provider")
     started_at: float = Field(description="Invoke start time", default=0)
 
     # pydantic configs

@@ -3,7 +3,7 @@ import logging
 import os
 from collections.abc import Sequence
 from threading import Lock
-from typing import TYPE_CHECKING, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -20,15 +20,13 @@ from core.model_runtime.model_providers.__base.text_embedding_model import TextE
 from core.model_runtime.model_providers.__base.tts_model import TTSModel
 from core.model_runtime.schema_validators.model_credential_schema_validator import ModelCredentialSchemaValidator
 from core.model_runtime.schema_validators.provider_credential_schema_validator import ProviderCredentialSchemaValidator
-
-if TYPE_CHECKING:
-    from core.plugin.entities.plugin_daemon import PluginModelProviderEntity
+from core.plugin.entities.plugin_daemon import PluginModelProviderEntity
 
 logger = logging.getLogger(__name__)
 
 
 class ModelProviderExtension(BaseModel):
-    plugin_model_provider_entity: "PluginModelProviderEntity"
+    plugin_model_provider_entity: PluginModelProviderEntity
     position: Optional[int] = None
 
 

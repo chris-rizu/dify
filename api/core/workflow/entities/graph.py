@@ -6,7 +6,7 @@ from typing import Any, Optional, cast
 from pydantic import BaseModel, Field
 
 from configs import dify_config
-from core.workflow.nodes import NodeType
+from core.workflow.enums import NodeType
 from core.workflow.nodes.answer.entities import AnswerStreamGenerateRoute
 from core.workflow.nodes.end.end_stream_generate_router import EndStreamGeneratorRouter
 from core.workflow.nodes.end.entities import EndStreamParam

@@ -12,9 +12,6 @@ from yarl import URL
 
 import contexts
 from core.helper.provider_cache import ToolProviderCredentialsCache
-from core.plugin.entities.plugin import ToolProviderID
-from core.plugin.impl.oauth import OAuthHandler
-from core.plugin.impl.tool import PluginToolManager
 from core.tools.__base.tool_provider import ToolProviderController
 from core.tools.__base.tool_runtime import ToolRuntime
 from core.tools.mcp_tool.provider import MCPToolProviderController
@@ -115,6 +112,8 @@ class ToolManager:
         get the plugin provider
         """
         # check if context is set
+        from core.plugin.impl.tool import PluginToolManager
+
         try:
             contexts.plugin_tool_providers.get()
         except LookupError:
@@ -170,6 +169,8 @@ class ToolManager:
 
         :return: the tool
         """
+        from core.plugin.entities.plugin import ToolProviderID
+
         if provider_type == ToolProviderType.BUILT_IN:
             # check if the builtin tool need credentials
             provider_controller = cls.get_builtin_provider(provider_id, tenant_id)
@@ -254,6 +255,7 @@ class ToolManager:
             # check if the credentials is expired
             if builtin_provider.expires_at != -1 and (builtin_provider.expires_at - 60) < int(time.time()):
                 # TODO: circular import
+                from core.plugin.impl.oauth import OAuthHandler
                 from services.tools.builtin_tools_manage_service import BuiltinToolManageService
 
                 # refresh the credentials
@@ -261,6 +263,7 @@ class ToolManager:
                 provider_name = tool_provider.provider_name
                 redirect_uri = f"{dify_config.CONSOLE_API_URL}/console/api/oauth/plugin/{provider_id}/tool/callback"
                 system_credentials = BuiltinToolManageService.get_oauth_client(tenant_id, provider_id)
+
                 oauth_handler = OAuthHandler()
                 # refresh the credentials
                 refreshed_credentials = oauth_handler.refresh_credentials(
@@ -514,6 +517,8 @@ class ToolManager:
         """
         list all the plugin providers
         """
+        from core.plugin.impl.tool import PluginToolManager
+
         manager = PluginToolManager()
         provider_entities = manager.fetch_tool_providers(tenant_id)
         return [
@@ -623,6 +628,8 @@ class ToolManager:
     def list_providers_from_api(
         cls, user_id: str, tenant_id: str, typ: ToolProviderTypeApiLiteral
     ) -> list[ToolProviderApiEntity]:
+        from core.plugin.entities.plugin import ToolProviderID
+
         result_providers: dict[str, ToolProviderApiEntity] = {}
 
         filters = []

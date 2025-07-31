@@ -19,7 +19,7 @@ class DefaultValueType(StrEnum):
     ARRAY_FILES = "array[file]"
 
 
-NumberType = Union[int, float]
+_NumberType = Union[int, float]
 
 
 class DefaultValue(BaseModel):
@@ -61,7 +61,7 @@ class DefaultValue(BaseModel):
                 "converter": lambda x: x,
             },
             DefaultValueType.NUMBER: {
-                "type": NumberType,
+                "type": _NumberType,
                 "converter": self._convert_number,
             },
             DefaultValueType.OBJECT: {
@@ -70,7 +70,7 @@ class DefaultValue(BaseModel):
             },
             DefaultValueType.ARRAY_NUMBER: {
                 "type": list,
-                "element_type": NumberType,
+                "element_type": _NumberType,
                 "converter": self._parse_json,
             },
             DefaultValueType.ARRAY_STRING: {

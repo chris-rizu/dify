@@ -10,8 +10,10 @@ from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.event import NodeEvent, RunCompletedEvent
 
 if TYPE_CHECKING:
-    from core.workflow.graph_engine import Graph, GraphInitParams, GraphRuntimeState
     from core.workflow.graph_engine.entities.event import InNodeEvent
+    from core.workflow.graph_engine.entities.graph import Graph
+    from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
+    from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 
 logger = logging.getLogger(__name__)
 

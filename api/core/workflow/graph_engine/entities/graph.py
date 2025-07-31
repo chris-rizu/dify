@@ -8,7 +8,6 @@ from pydantic import BaseModel, Field
 from configs import dify_config
 from core.workflow.graph_engine.entities.run_condition import RunCondition
 from core.workflow.nodes import NodeType
-from core.workflow.nodes.answer.answer_stream_generate_router import AnswerStreamGeneratorRouter
 from core.workflow.nodes.answer.entities import AnswerStreamGenerateRoute
 from core.workflow.nodes.end.end_stream_generate_router import EndStreamGeneratorRouter
 from core.workflow.nodes.end.entities import EndStreamParam
@@ -178,6 +177,8 @@ class Graph(BaseModel):
                 )
 
         # init answer stream generate routes
+        from core.workflow.nodes.answer.answer_stream_generate_router import AnswerStreamGeneratorRouter
+
         answer_stream_generate_routes = AnswerStreamGeneratorRouter.init(
             node_id_config_mapping=node_id_config_mapping, reverse_edge_mapping=reverse_edge_mapping
         )

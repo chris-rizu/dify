@@ -1,3 +1,4 @@
+from abc import ABC
 from collections.abc import Sequence
 from datetime import datetime
 
@@ -6,8 +7,13 @@ from pydantic import Field
 from core.model_runtime.entities.llm_entities import LLMUsage
 from core.rag.entities.citation_metadata import RetrievalSourceMetadata
 from core.workflow.entities.node_entities import NodeRunResult
+from core.workflow.graph_engine.entities.event import GraphEngineEvent
 
-from .types import NodeEvent
+
+class NodeEvent(GraphEngineEvent, ABC):
+    """Base class for all node events"""
+
+    pass
 
 
 class RunCompletedEvent(NodeEvent):

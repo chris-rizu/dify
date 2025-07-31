@@ -23,10 +23,13 @@ from core.workflow.entities import (
     RouteNodeState,
     VariablePool,
     VariableValue,
+)
+from core.workflow.enums import (
+    ErrorStrategy,
+    FailBranchSourceHandle,
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
 )
-from core.workflow.enums import ErrorStrategy, FailBranchSourceHandle
 from core.workflow.events import (
     BaseAgentEvent,
     BaseIterationEvent,

@@ -63,7 +63,8 @@ class BaseNode:
         raise NotImplementedError
 
     def run(self) -> "Generator[Union[NodeEvent, InNodeEvent], None, None]":
-        from core.workflow.entities import NodeRunResult, WorkflowNodeExecutionStatus
+        from core.workflow.entities import NodeRunResult
+        from core.workflow.enums import WorkflowNodeExecutionStatus
         from core.workflow.events import RunCompletedEvent
 
         try:

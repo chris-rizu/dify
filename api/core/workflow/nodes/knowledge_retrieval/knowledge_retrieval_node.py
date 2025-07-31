@@ -32,8 +32,8 @@ from core.variables import (
     StringSegment,
 )
 from core.variables.segments import ArrayObjectSegment
-from core.workflow.entities import GraphInitParams, NodeRunResult, WorkflowNodeExecutionStatus
-from core.workflow.enums import ErrorStrategy, NodeType
+from core.workflow.entities import GraphInitParams, NodeRunResult
+from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
 from core.workflow.events import (
     ModelInvokeCompletedEvent,
 )

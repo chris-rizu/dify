@@ -4,8 +4,7 @@ from typing import Any, Optional
 from pydantic import BaseModel
 
 from core.model_runtime.entities.llm_entities import LLMUsage
-
-from .workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
+from core.workflow.enums import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
 
 
 class NodeRunResult(BaseModel):

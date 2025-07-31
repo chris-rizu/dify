@@ -6,7 +6,8 @@ from typing import cast
 import pytest
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.workflow.entities import Graph, GraphInitParams, NodeRunResult, VariablePool, WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, GraphInitParams, NodeRunResult, VariablePool
+from core.workflow.enums import WorkflowNodeExecutionStatus
 from core.workflow.nodes.code.code_node import CodeNode
 from core.workflow.nodes.code.entities import CodeNodeData
 from core.workflow.runtime_state import GraphRuntimeState

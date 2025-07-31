@@ -20,10 +20,14 @@ from core.ops.ops_trace_manager import TraceQueueManager, TraceTask
 from core.workflow.entities import (
     WorkflowExecution,
     WorkflowNodeExecution,
+)
+from core.workflow.enums import (
+    SystemVariableKey,
+    WorkflowExecutionStatus,
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
+    WorkflowType,
 )
-from core.workflow.enums import SystemVariableKey, WorkflowExecutionStatus, WorkflowType
 from core.workflow.repositories.workflow_execution_repository import WorkflowExecutionRepository
 from core.workflow.repositories.workflow_node_execution_repository import WorkflowNodeExecutionRepository
 from core.workflow.system_variable import SystemVariable

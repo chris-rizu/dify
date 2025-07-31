@@ -3,8 +3,8 @@ from typing import Any, Literal, Optional
 
 from typing_extensions import deprecated
 
-from core.workflow.entities import NodeRunResult, VariablePool, WorkflowNodeExecutionStatus
-from core.workflow.enums import ErrorStrategy, NodeType
+from core.workflow.entities import NodeRunResult, VariablePool
+from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.if_else.entities import IfElseNodeData

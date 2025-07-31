@@ -14,12 +14,11 @@ from core.app.entities.queue_entities import (
 )
 from core.workflow.entities import (
     WorkflowExecution,
-    WorkflowExecutionStatus,
     WorkflowNodeExecution,
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
-    WorkflowType,
 )
+from core.workflow.enums import WorkflowExecutionStatus, WorkflowType
 from core.workflow.nodes import NodeType
 from core.workflow.repositories.workflow_execution_repository import WorkflowExecutionRepository
 from core.workflow.repositories.workflow_node_execution_repository import WorkflowNodeExecutionRepository

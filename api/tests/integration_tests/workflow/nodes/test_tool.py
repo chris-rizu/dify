@@ -4,7 +4,8 @@ from unittest.mock import MagicMock
 
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.tools.utils.configuration import ToolParameterConfigurationManager
-from core.workflow.entities import Graph, GraphInitParams, VariablePool, WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.enums import WorkflowNodeExecutionStatus
 from core.workflow.events.node import RunCompletedEvent
 from core.workflow.nodes.tool.tool_node import ToolNode
 from core.workflow.runtime_state import GraphRuntimeState

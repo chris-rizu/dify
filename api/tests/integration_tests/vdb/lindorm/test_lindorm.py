@@ -5,7 +5,9 @@ from tests.integration_tests.vdb.test_vector_store import AbstractVectorTest, se
 
 
 class Config:
-    SEARCH_ENDPOINT = os.environ.get("SEARCH_ENDPOINT", "http://ld-************-proxy-search-pub.lindorm.aliyuncs.com:30070")
+    SEARCH_ENDPOINT = os.environ.get(
+        "SEARCH_ENDPOINT", "http://ld-************-proxy-search-pub.lindorm.aliyuncs.com:30070"
+    )
     SEARCH_USERNAME = os.environ.get("SEARCH_USERNAME", "ADMIN")
     SEARCH_PWD = os.environ.get("SEARCH_PWD", "ADMIN")
     USING_UGC = os.environ.get("USING_UGC", "True").lower() == "true"

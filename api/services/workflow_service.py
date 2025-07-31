@@ -15,8 +15,8 @@ from core.file import File
 from core.repositories import DifyCoreRepositoryFactory
 from core.variables import Variable
 from core.variables.variables import VariableUnion
-from core.workflow.entities import NodeRunResult, VariablePool, WorkflowNodeExecution, WorkflowNodeExecutionStatus
-from core.workflow.enums import ErrorStrategy
+from core.workflow.entities import NodeRunResult, VariablePool, WorkflowNodeExecution
+from core.workflow.enums import ErrorStrategy, WorkflowNodeExecutionStatus
 from core.workflow.errors import WorkflowNodeRunFailedError
 from core.workflow.events import InNodeEvent, NodeEvent, RunCompletedEvent
 from core.workflow.nodes import NodeType

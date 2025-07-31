@@ -3,7 +3,8 @@ import uuid
 from unittest.mock import MagicMock
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.workflow.entities import Graph, GraphInitParams, VariablePool, WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.enums import WorkflowNodeExecutionStatus
 from core.workflow.nodes.answer.answer_node import AnswerNode
 from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable

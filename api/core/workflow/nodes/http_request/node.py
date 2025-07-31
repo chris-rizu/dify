@@ -7,8 +7,8 @@ from configs import dify_config
 from core.file import File, FileTransferMethod
 from core.tools.tool_file_manager import ToolFileManager
 from core.variables.segments import ArrayFileSegment
-from core.workflow.entities import NodeRunResult, WorkflowNodeExecutionStatus
-from core.workflow.enums import ErrorStrategy, NodeType
+from core.workflow.entities import NodeRunResult
+from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig, VariableSelector
 from core.workflow.nodes.http_request.executor import Executor

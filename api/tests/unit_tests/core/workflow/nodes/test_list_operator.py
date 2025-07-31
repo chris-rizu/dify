@@ -5,8 +5,7 @@ import pytest
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.file import File, FileTransferMethod, FileType
 from core.variables import ArrayFileSegment
-from core.workflow.entities import WorkflowNodeExecutionStatus
-from core.workflow.enums import WorkflowType
+from core.workflow.enums import WorkflowNodeExecutionStatus, WorkflowType
 from core.workflow.nodes.list_operator.entities import (
     ExtractConfig,
     FilterBy,
@@ -51,7 +50,7 @@ def list_operator_node():
     graph_init_params.user_from = UserFrom.ACCOUNT
     graph_init_params.invoke_from = InvokeFrom.SERVICE_API
     graph_init_params.call_depth = 0
-    
+
     node = ListOperatorNode(
         id="test_node_id",
         config=node_config,

@@ -6,7 +6,8 @@ from unittest.mock import MagicMock, patch
 
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.llm_generator.output_parser.structured_output import _parse_structured_output
-from core.workflow.entities import Graph, GraphInitParams, VariablePool, WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.enums import WorkflowNodeExecutionStatus
 from core.workflow.events import RunCompletedEvent
 from core.workflow.nodes.llm.node import LLMNode
 from core.workflow.runtime_state import GraphRuntimeState

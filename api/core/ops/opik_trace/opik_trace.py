@@ -22,8 +22,7 @@ from core.ops.entities.trace_entity import (
     WorkflowTraceInfo,
 )
 from core.repositories import DifyCoreRepositoryFactory
-from core.workflow.entities import WorkflowNodeExecutionMetadataKey
-from core.workflow.enums import NodeType
+from core.workflow.enums import NodeType, WorkflowNodeExecutionMetadataKey
 from extensions.ext_database import db
 from models import EndUser, MessageFile, WorkflowNodeExecutionTriggeredFrom
 

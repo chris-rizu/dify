@@ -17,10 +17,14 @@ from core.variables.variables import ArrayAnyVariable
 from core.workflow.entities import (
     NodeRunResult,
     VariablePool,
+)
+from core.workflow.enums import (
+    ErrorStrategy,
+    NodeType,
+    SystemVariableKey,
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
 )
-from core.workflow.enums import ErrorStrategy, NodeType, SystemVariableKey
 from core.workflow.events import RunCompletedEvent, RunStreamChunkEvent
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig

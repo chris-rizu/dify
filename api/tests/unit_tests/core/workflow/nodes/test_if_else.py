@@ -5,8 +5,8 @@ from unittest.mock import MagicMock, Mock
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.file import File, FileTransferMethod, FileType
 from core.variables import ArrayFileSegment
-from core.workflow.entities import Graph, GraphInitParams, VariablePool, WorkflowNodeExecutionStatus
-from core.workflow.enums import WorkflowType
+from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.enums import WorkflowNodeExecutionStatus, WorkflowType
 from core.workflow.nodes.if_else.entities import IfElseNodeData
 from core.workflow.nodes.if_else.if_else_node import IfElseNode
 from core.workflow.runtime_state import GraphRuntimeState
@@ -251,7 +251,7 @@ def test_array_file_contains_file_name():
     graph_init_params.user_from = UserFrom.ACCOUNT
     graph_init_params.invoke_from = InvokeFrom.SERVICE_API
     graph_init_params.call_depth = 0
-    
+
     node = IfElseNode(
         id=str(uuid.uuid4()),
         graph_init_params=graph_init_params,

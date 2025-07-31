@@ -22,7 +22,9 @@ from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom,
 from core.model_runtime.model_providers.model_provider_factory import ModelProviderFactory
 from core.variables import ArrayAnySegment, ArrayFileSegment, NoneSegment
 from core.workflow.entities.variable_pool import VariablePool
-from core.workflow.graph_engine import Graph, GraphInitParams, GraphRuntimeState
+from core.workflow.graph_engine.entities.graph import Graph
+from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
+from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.nodes.answer import AnswerStreamGenerateRoute
 from core.workflow.nodes.end import EndStreamParam
 from core.workflow.nodes.llm import llm_utils

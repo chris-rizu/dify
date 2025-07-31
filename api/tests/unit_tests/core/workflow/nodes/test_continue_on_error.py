@@ -11,10 +11,10 @@ from core.workflow.events import (
     NodeRunFailedEvent,
     NodeRunStreamChunkEvent,
 )
+from core.workflow.events.node import RunCompletedEvent, RunStreamChunkEvent
 from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.graph_engine.entities.graph_runtime_state import GraphRuntimeState
 from core.workflow.graph_engine.graph_engine import GraphEngine
-from core.workflow.nodes.event.event import RunCompletedEvent, RunStreamChunkEvent
 from core.workflow.nodes.llm.node import LLMNode
 from core.workflow.system_variable import SystemVariable
 from models.enums import UserFrom

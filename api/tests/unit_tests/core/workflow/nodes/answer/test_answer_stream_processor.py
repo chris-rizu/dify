@@ -2,6 +2,7 @@ import uuid
 from collections.abc import Generator
 from datetime import UTC, datetime
 
+from core.workflow.entities.route_node_state import RouteNodeState
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.events import (
     GraphEngineEvent,
@@ -10,7 +11,6 @@ from core.workflow.events import (
     NodeRunSucceededEvent,
 )
 from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.runtime_route_state import RouteNodeState
 from core.workflow.nodes.answer.answer_stream_processor import AnswerStreamProcessor
 from core.workflow.nodes.enums import NodeType
 from core.workflow.nodes.start.entities import StartNodeData

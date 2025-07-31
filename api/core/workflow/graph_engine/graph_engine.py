@@ -15,6 +15,7 @@ from configs import dify_config
 from core.app.apps.exc import GenerateTaskStoppedError
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.workflow.entities.node_entities import AgentNodeStrategyInit, NodeRunResult
+from core.workflow.entities.route_node_state import RouteNodeState
 from core.workflow.entities.variable_pool import VariablePool, VariableValue
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
 from core.workflow.events import (
@@ -43,7 +44,6 @@ from core.workflow.events import (
 from core.workflow.graph_engine.condition_handlers.condition_manager import ConditionManager
 from core.workflow.graph_engine.entities.graph import Graph, GraphEdge
 from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
-from core.workflow.graph_engine.entities.runtime_route_state import RouteNodeState
 from core.workflow.nodes import NodeType
 from core.workflow.nodes.agent.agent_node import AgentNode
 from core.workflow.nodes.agent.entities import AgentNodeData

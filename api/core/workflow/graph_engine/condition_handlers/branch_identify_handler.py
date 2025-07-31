@@ -1,5 +1,5 @@
+from core.workflow.entities.route_node_state import RouteNodeState
 from core.workflow.graph_engine.condition_handlers.base_handler import RunConditionHandler
-from core.workflow.graph_engine.entities.runtime_route_state import RouteNodeState
 from core.workflow.runtime_state import GraphRuntimeState
 
 

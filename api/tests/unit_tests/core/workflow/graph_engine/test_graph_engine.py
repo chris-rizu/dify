@@ -6,6 +6,7 @@ from flask import Flask
 
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.workflow.entities.node_entities import NodeRunResult, WorkflowNodeExecutionMetadataKey
+from core.workflow.entities.route_node_state import RouteNodeState
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
 from core.workflow.events import (
@@ -21,7 +22,6 @@ from core.workflow.events import (
     RunStreamChunkEvent,
 )
 from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.runtime_route_state import RouteNodeState
 from core.workflow.graph_engine.graph_engine import GraphEngine
 from core.workflow.nodes.code.code_node import CodeNode
 from core.workflow.nodes.llm.node import LLMNode

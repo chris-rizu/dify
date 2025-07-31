@@ -29,9 +29,9 @@ from core.variables.types import SegmentType
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
+from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.base.node import BaseNode
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.llm import ModelConfig, llm_utils
 from core.workflow.utils import variable_template_parser
 from factories.variable_factory import build_segment_with_type

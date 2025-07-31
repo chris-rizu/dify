@@ -5,8 +5,8 @@ from typing import Any, Optional, Union
 
 from pydantic import BaseModel, model_validator
 
+from core.workflow.enums import ErrorStrategy
 from core.workflow.nodes.base.exc import DefaultValueTypeError
-from core.workflow.nodes.enums import ErrorStrategy
 
 
 class DefaultValueType(StrEnum):

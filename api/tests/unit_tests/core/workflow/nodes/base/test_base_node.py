@@ -1,5 +1,5 @@
+from core.workflow.enums import NodeType
 from core.workflow.nodes.base.node import BaseNode
-from core.workflow.nodes.enums import NodeType
 
 # Ensures that all node classes are imported.
 from core.workflow.nodes.node_mapping import NODE_TYPE_CLASSES_MAPPING

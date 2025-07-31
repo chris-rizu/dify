@@ -54,7 +54,7 @@ from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_entities import VariableSelector
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
-from core.workflow.enums import SystemVariableKey
+from core.workflow.enums import ErrorStrategy, NodeType, SystemVariableKey
 from core.workflow.events import (
     InNodeEvent,
     ModelInvokeCompletedEvent,
@@ -65,7 +65,6 @@ from core.workflow.events import (
 )
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.utils.variable_template_parser import VariableTemplateParser
 
 from . import llm_utils

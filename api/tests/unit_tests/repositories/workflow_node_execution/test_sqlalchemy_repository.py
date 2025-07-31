@@ -18,7 +18,7 @@ from core.workflow.entities.workflow_node_execution import (
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
 )
-from core.workflow.nodes.enums import NodeType
+from core.workflow.enums import NodeType
 from core.workflow.repositories.workflow_node_execution_repository import OrderConfig
 from models.account import Account, Tenant
 from models.workflow import WorkflowNodeExecutionModel, WorkflowNodeExecutionTriggeredFrom

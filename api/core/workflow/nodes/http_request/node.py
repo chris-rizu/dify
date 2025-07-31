@@ -10,9 +10,9 @@ from core.variables.segments import ArrayFileSegment
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_entities import VariableSelector
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.http_request.executor import Executor
 from core.workflow.utils import variable_template_parser
 from factories import file_factory

@@ -5,9 +5,9 @@ from typing import TYPE_CHECKING, Any, ClassVar, Optional, Union
 
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.events import NodeEvent, RunCompletedEvent
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 
 if TYPE_CHECKING:
     from core.workflow.events import InNodeEvent

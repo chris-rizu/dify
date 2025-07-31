@@ -1,4 +1,5 @@
 from core.prompt.utils.prompt_template_parser import PromptTemplateParser
+from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.answer.entities import (
     AnswerNodeData,
     AnswerStreamGenerateRoute,
@@ -6,7 +7,6 @@ from core.workflow.nodes.answer.entities import (
     TextGenerateRouteChunk,
     VarGenerateRouteChunk,
 )
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.utils.variable_template_parser import VariableTemplateParser
 
 

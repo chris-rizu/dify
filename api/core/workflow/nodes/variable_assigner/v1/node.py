@@ -6,9 +6,9 @@ from core.workflow.constants import CONVERSATION_VARIABLE_NODE_ID
 from core.workflow.conversation_variable_updater import ConversationVariableUpdater
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
+from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.variable_assigner.common import helpers as common_helpers
 from core.workflow.nodes.variable_assigner.common.exc import VariableOperatorNodeError
 from factories import variable_factory

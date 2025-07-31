@@ -13,7 +13,7 @@ from typing import Any, Optional
 
 from pydantic import BaseModel, Field
 
-from core.workflow.nodes.enums import NodeType
+from core.workflow.enums import NodeType
 
 
 class WorkflowNodeExecutionMetadataKey(StrEnum):

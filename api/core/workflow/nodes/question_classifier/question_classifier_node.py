@@ -13,10 +13,10 @@ from core.prompt.utils.prompt_message_util import PromptMessageUtil
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_entities import VariableSelector
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
+from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.events import ModelInvokeCompletedEvent
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.base.node import BaseNode
-from core.workflow.nodes.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.llm import (
     LLMNode,
     LLMNodeChatModelMessage,

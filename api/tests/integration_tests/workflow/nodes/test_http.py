@@ -5,9 +5,8 @@ from urllib.parse import urlencode
 import pytest
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, VariablePool
 from core.workflow.nodes.http_request.node import HttpRequestNode
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 from models.enums import UserFrom
 from models.workflow import WorkflowType

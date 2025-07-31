@@ -12,16 +12,13 @@ from core.workflow.events.base import BaseNodeEvent, NodeEvent
 
 class NodeRunStartedEvent(BaseNodeEvent):
     predecessor_node_id: Optional[str] = None
-    """predecessor node id"""
     parallel_mode_run_id: Optional[str] = None
-    """iteration node parallel mode run id"""
     agent_strategy: Optional[AgentNodeStrategyInit] = None
 
 
 class NodeRunStreamChunkEvent(BaseNodeEvent):
     chunk_content: str = Field(..., description="chunk content")
     from_variable_selector: Optional[list[str]] = None
-    """from variable selector"""
 
 
 class NodeRunRetrieverResourceEvent(BaseNodeEvent):
@@ -55,7 +52,6 @@ class NodeRunRetryEvent(NodeRunStartedEvent):
     start_at: datetime = Field(..., description="retry start time")
 
 
-# Events from nodes/events.py
 class RunCompletedEvent(NodeEvent):
     run_result: NodeRunResult = Field(..., description="run result")
 
@@ -71,18 +67,12 @@ class RunRetrieverResourceEvent(NodeEvent):
 
 
 class ModelInvokeCompletedEvent(NodeEvent):
-    """
-    Model invoke completed
-    """
-
     text: str
     usage: LLMUsage
     finish_reason: str | None = None
 
 
 class RunRetryEvent(NodeEvent):
-    """Node Run Retry event"""
-
     error: str = Field(..., description="error")
     retry_index: int = Field(..., description="Retry attempt number")
     start_at: datetime = Field(..., description="Retry start time")

@@ -9,10 +9,9 @@ from unittest.mock import patch
 
 import pytest
 
-from core.workflow.entities import Graph, VariablePool
+from core.workflow.entities import Graph, GraphRuntimeState, VariablePool
 from core.workflow.events import GraphRunStartedEvent, GraphRunSucceededEvent
 from core.workflow.graph_engine.queue_based_graph_engine import QueueBasedGraphEngine
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 
 from .conftest import MockEventQueue, MockTaskQueue

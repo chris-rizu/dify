@@ -10,14 +10,13 @@ from core.app.entities.app_invoke_entities import InvokeFrom
 from core.file.models import File
 from core.workflow.callbacks import WorkflowCallback
 from core.workflow.constants import ENVIRONMENT_VARIABLE_NODE_ID
-from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, VariablePool
 from core.workflow.errors import WorkflowNodeRunFailedError
 from core.workflow.events import GraphEngineEvent, GraphRunFailedEvent, InNodeEvent, NodeEvent
 from core.workflow.graph_engine.graph_engine import GraphEngine
 from core.workflow.nodes import NodeType
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.node_mapping import NODE_TYPE_CLASSES_MAPPING
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 from core.workflow.variable_loader import DUMMY_VARIABLE_LOADER, VariableLoader, load_into_variable_pool
 from factories import file_factory

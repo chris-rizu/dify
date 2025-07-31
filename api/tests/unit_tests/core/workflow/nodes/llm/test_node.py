@@ -21,7 +21,7 @@ from core.model_runtime.entities.message_entities import (
 from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom, ModelType
 from core.model_runtime.model_providers.model_provider_factory import ModelProviderFactory
 from core.variables import ArrayAnySegment, ArrayFileSegment, NoneSegment
-from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, VariablePool
 from core.workflow.nodes.answer.entities import AnswerStreamGenerateRoute
 from core.workflow.nodes.end.entities import EndStreamParam
 from core.workflow.nodes.llm import llm_utils
@@ -35,7 +35,6 @@ from core.workflow.nodes.llm.entities import (
 )
 from core.workflow.nodes.llm.file_saver import LLMFileSaver
 from core.workflow.nodes.llm.node import LLMNode
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 from models.enums import UserFrom
 from models.provider import ProviderType

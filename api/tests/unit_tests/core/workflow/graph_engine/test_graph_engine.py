@@ -7,9 +7,12 @@ from flask import Flask
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.workflow.entities import (
     Graph,
+    GraphRuntimeState,
     NodeRunResult,
     RouteNodeState,
     VariablePool,
+)
+from core.workflow.enums import (
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
 )
@@ -29,7 +32,6 @@ from core.workflow.graph_engine.graph_engine import GraphEngine
 from core.workflow.nodes.code.code_node import CodeNode
 from core.workflow.nodes.llm.node import LLMNode
 from core.workflow.nodes.question_classifier.question_classifier_node import QuestionClassifierNode
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 from models.enums import UserFrom
 from models.workflow import WorkflowType

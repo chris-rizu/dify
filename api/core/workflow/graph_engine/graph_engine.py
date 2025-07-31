@@ -19,6 +19,7 @@ from core.workflow.entities import (
     Graph,
     GraphEdge,
     GraphInitParams,
+    GraphRuntimeState,
     NodeRunResult,
     RouteNodeState,
     VariablePool,
@@ -61,7 +62,6 @@ from core.workflow.nodes.answer.answer_stream_processor import AnswerStreamProce
 from core.workflow.nodes.answer.base_stream_processor import StreamProcessor
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.end.end_stream_processor import EndStreamProcessor
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.utils import variable_utils
 from libs.flask_utils import preserve_flask_contexts
 from models.enums import UserFrom

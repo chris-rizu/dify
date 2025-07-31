@@ -15,7 +15,7 @@ from types import GeneratorType
 from typing import Any, Optional
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.workflow.entities import Graph, GraphInitParams, NodeRunResult
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, NodeRunResult
 from core.workflow.events import (
     GraphEngineEvent,
     GraphRunFailedEvent,
@@ -25,7 +25,6 @@ from core.workflow.events import (
 )
 from core.workflow.nodes import NodeType
 from core.workflow.nodes.node_mapping import NODE_TYPE_CLASSES_MAPPING
-from core.workflow.runtime_state import GraphRuntimeState
 from models.enums import UserFrom
 from models.workflow import WorkflowType
 

@@ -1,11 +1,11 @@
 import threading
 import time
 
-from core.workflow.entities import Graph, NodeRunResult, VariablePool, WorkflowNodeExecutionStatus
+from core.workflow.entities import Graph, GraphRuntimeState, NodeRunResult, VariablePool
+from core.workflow.enums import WorkflowNodeExecutionStatus
 from core.workflow.events import GraphRunStartedEvent, GraphRunSucceededEvent, RunCompletedEvent
 from core.workflow.graph_engine.queue_based_graph_engine import QueueBasedGraphEngine
 from core.workflow.graph_engine.queue_based_graph_engine.entities import Task
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 
 from .conftest import MockEventQueue, MockTaskQueue

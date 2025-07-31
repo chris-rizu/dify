@@ -6,10 +6,9 @@ from uuid import uuid4
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.variables import ArrayStringVariable, StringVariable
 from core.workflow.conversation_variable_updater import ConversationVariableUpdater
-from core.workflow.entities import Graph, GraphInitParams, VariablePool
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, VariablePool
 from core.workflow.nodes.variable_assigner.v1 import VariableAssignerNode
 from core.workflow.nodes.variable_assigner.v1.node_data import WriteMode
-from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable
 from models.enums import UserFrom
 from models.workflow import WorkflowType

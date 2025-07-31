@@ -153,8 +153,8 @@ class IterationNode(BaseNode):
         variable_pool.add([self.node_id, "item"], iterator_list_value[0])
 
         # init graph engine
+        from core.workflow.entities import GraphRuntimeState
         from core.workflow.graph_engine.graph_engine import GraphEngine, GraphEngineThreadPool
-        from core.workflow.runtime_state import GraphRuntimeState
 
         graph_runtime_state = GraphRuntimeState(variable_pool=variable_pool, start_at=time.perf_counter())
 

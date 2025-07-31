@@ -95,8 +95,7 @@ from .file_saver import FileSaverImpl, LLMFileSaver
 
 if TYPE_CHECKING:
     from core.file.models import File
-    from core.workflow.entities import Graph
-    from core.workflow.runtime_state import GraphRuntimeState
+    from core.workflow.entities import Graph, GraphRuntimeState
 
 logger = logging.getLogger(__name__)
 

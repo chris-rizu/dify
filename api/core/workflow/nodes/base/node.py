@@ -9,10 +9,9 @@ from models.enums import UserFrom
 from models.workflow import WorkflowType
 
 if TYPE_CHECKING:
-    from core.workflow.entities import Graph, GraphInitParams, NodeRunResult
+    from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, NodeRunResult
     from core.workflow.enums import ErrorStrategy, NodeType
     from core.workflow.events import InNodeEvent, NodeEvent
-    from core.workflow.runtime_state import GraphRuntimeState
 
 logger = logging.getLogger(__name__)
 

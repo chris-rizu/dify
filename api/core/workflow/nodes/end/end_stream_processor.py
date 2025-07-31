@@ -1,6 +1,7 @@
 import logging
 from collections.abc import Generator
 
+from core.workflow.entities import Graph
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.events import (
     GraphEngineEvent,
@@ -8,7 +9,6 @@ from core.workflow.events import (
     NodeRunStreamChunkEvent,
     NodeRunSucceededEvent,
 )
-from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.nodes.answer.base_stream_processor import StreamProcessor
 
 logger = logging.getLogger(__name__)

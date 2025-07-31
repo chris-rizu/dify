@@ -32,6 +32,7 @@ from core.variables import (
     StringSegment,
 )
 from core.variables.segments import ArrayObjectSegment
+from core.workflow.entities.graph_init_params import GraphInitParams
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
 from core.workflow.enums import ErrorStrategy, NodeType
@@ -70,8 +71,7 @@ from .exc import (
 
 if TYPE_CHECKING:
     from core.file.models import File
-    from core.workflow.graph_engine.entities.graph import Graph
-    from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
+    from core.workflow.entities import Graph
     from core.workflow.runtime_state import GraphRuntimeState
 
 logger = logging.getLogger(__name__)

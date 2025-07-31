@@ -6,11 +6,11 @@ from typing import cast
 import pytest
 
 from core.app.entities.app_invoke_entities import InvokeFrom
+from core.workflow.entities import Graph
+from core.workflow.entities.graph_init_params import GraphInitParams
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
-from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
 from core.workflow.nodes.code.code_node import CodeNode
 from core.workflow.nodes.code.entities import CodeNodeData
 from core.workflow.runtime_state import GraphRuntimeState

@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING, Any, Optional, TypeAlias
 from core.variables import SegmentType, Variable
 from core.workflow.constants import CONVERSATION_VARIABLE_NODE_ID
 from core.workflow.conversation_variable_updater import ConversationVariableUpdater
+from core.workflow.entities.graph_init_params import GraphInitParams
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
 from core.workflow.enums import ErrorStrategy, NodeType
@@ -17,8 +18,7 @@ from ..common.impl import conversation_variable_updater_factory
 from .node_data import VariableAssignerData, WriteMode
 
 if TYPE_CHECKING:
-    from core.workflow.graph_engine.entities.graph import Graph
-    from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
+    from core.workflow.entities import Graph
     from core.workflow.runtime_state import GraphRuntimeState
 
 

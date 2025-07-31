@@ -4,12 +4,12 @@ from unittest.mock import patch
 
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.variables.segments import ArrayAnySegment, ArrayStringSegment
+from core.workflow.entities import Graph
+from core.workflow.entities.graph_init_params import GraphInitParams
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
 from core.workflow.events import RunCompletedEvent
-from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
 from core.workflow.nodes.iteration.entities import ErrorHandleMode
 from core.workflow.nodes.iteration.iteration_node import IterationNode
 from core.workflow.nodes.template_transform.template_transform_node import TemplateTransformNode

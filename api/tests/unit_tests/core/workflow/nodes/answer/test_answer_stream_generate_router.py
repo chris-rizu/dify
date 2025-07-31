@@ -1,4 +1,4 @@
-from core.workflow.graph_engine.entities.graph import Graph
+from core.workflow.entities import Graph
 from core.workflow.nodes.answer.answer_stream_generate_router import AnswerStreamGeneratorRouter
 
 

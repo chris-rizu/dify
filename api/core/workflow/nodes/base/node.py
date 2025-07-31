@@ -10,9 +10,9 @@ from core.workflow.events import NodeEvent, RunCompletedEvent
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 
 if TYPE_CHECKING:
+    from core.workflow.entities import Graph
+    from core.workflow.entities.graph_init_params import GraphInitParams
     from core.workflow.events import InNodeEvent
-    from core.workflow.graph_engine.entities.graph import Graph
-    from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
     from core.workflow.runtime_state import GraphRuntimeState
 
 logger = logging.getLogger(__name__)

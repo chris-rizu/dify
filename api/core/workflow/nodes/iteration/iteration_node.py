@@ -13,6 +13,7 @@ from flask import Flask, current_app
 from configs import dify_config
 from core.variables import ArrayVariable, IntegerVariable, NoneVariable
 from core.variables.segments import ArrayAnySegment, ArraySegment
+from core.workflow.entities import Graph
 from core.workflow.entities.node_entities import (
     NodeRunResult,
 )
@@ -37,7 +38,6 @@ from core.workflow.events import (
     NodeRunSucceededEvent,
     RunCompletedEvent,
 )
-from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.iteration.entities import ErrorHandleMode, IterationNodeData

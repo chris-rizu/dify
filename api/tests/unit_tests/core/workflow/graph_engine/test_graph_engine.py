@@ -5,6 +5,7 @@ import pytest
 from flask import Flask
 
 from core.app.entities.app_invoke_entities import InvokeFrom
+from core.workflow.entities import Graph
 from core.workflow.entities.node_entities import NodeRunResult, WorkflowNodeExecutionMetadataKey
 from core.workflow.entities.route_node_state import RouteNodeState
 from core.workflow.entities.variable_pool import VariablePool
@@ -21,7 +22,6 @@ from core.workflow.events import (
     RunCompletedEvent,
     RunStreamChunkEvent,
 )
-from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.graph_engine.graph_engine import GraphEngine
 from core.workflow.nodes.code.code_node import CodeNode
 from core.workflow.nodes.llm.node import LLMNode

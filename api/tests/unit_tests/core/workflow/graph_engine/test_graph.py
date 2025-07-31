@@ -1,4 +1,4 @@
-from core.workflow.graph_engine.entities.graph import Graph
+from core.workflow.entities import Graph
 from core.workflow.graph_engine.entities.run_condition import RunCondition
 from core.workflow.utils.condition.entities import Condition
 

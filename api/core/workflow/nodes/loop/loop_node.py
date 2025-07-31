@@ -11,6 +11,7 @@ from core.variables import (
     Segment,
     SegmentType,
 )
+from core.workflow.entities import Graph
 from core.workflow.entities.node_entities import NodeRunResult
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
 from core.workflow.enums import ErrorStrategy, NodeType
@@ -31,7 +32,6 @@ from core.workflow.events import (
     NodeRunSucceededEvent,
     RunCompletedEvent,
 )
-from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.loop.entities import LoopNodeData

@@ -2,6 +2,7 @@ import time
 from unittest.mock import patch
 
 from core.app.entities.app_invoke_entities import InvokeFrom
+from core.workflow.entities import Graph
 from core.workflow.entities.node_entities import NodeRunResult, WorkflowNodeExecutionMetadataKey
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.entities.workflow_node_execution import WorkflowNodeExecutionStatus
@@ -12,7 +13,6 @@ from core.workflow.events import (
     NodeRunStreamChunkEvent,
 )
 from core.workflow.events.node import RunCompletedEvent, RunStreamChunkEvent
-from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.graph_engine.graph_engine import GraphEngine
 from core.workflow.nodes.llm.node import LLMNode
 from core.workflow.runtime_state import GraphRuntimeState

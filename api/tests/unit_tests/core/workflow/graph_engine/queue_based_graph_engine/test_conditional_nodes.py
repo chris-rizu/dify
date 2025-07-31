@@ -1,8 +1,8 @@
 import time
 
+from core.workflow.entities import Graph
 from core.workflow.entities.variable_pool import VariablePool
 from core.workflow.events import GraphRunStartedEvent, GraphRunSucceededEvent
-from core.workflow.graph_engine.entities.graph import Graph
 from core.workflow.graph_engine.queue_based_graph_engine import QueueBasedGraphEngine
 from core.workflow.runtime_state import GraphRuntimeState
 from core.workflow.system_variable import SystemVariable

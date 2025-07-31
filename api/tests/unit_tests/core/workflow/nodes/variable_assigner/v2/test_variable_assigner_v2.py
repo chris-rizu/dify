@@ -4,9 +4,9 @@ from uuid import uuid4
 
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.variables import ArrayStringVariable
+from core.workflow.entities import Graph
+from core.workflow.entities.graph_init_params import GraphInitParams
 from core.workflow.entities.variable_pool import VariablePool
-from core.workflow.graph_engine.entities.graph import Graph
-from core.workflow.graph_engine.entities.graph_init_params import GraphInitParams
 from core.workflow.nodes.variable_assigner.v2 import VariableAssignerNode
 from core.workflow.nodes.variable_assigner.v2.enums import InputType, Operation
 from core.workflow.runtime_state import GraphRuntimeState

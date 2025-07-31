@@ -5,8 +5,9 @@ from datetime import UTC, datetime
 import pytest
 from pydantic import ValidationError
 
-from core.workflow.entities import NodeRunResult, RouteNodeState, RuntimeRouteState
+from core.workflow.entities import RouteNodeState, RuntimeRouteState
 from core.workflow.enums import WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 
 _TEST_DATETIME = datetime(2024, 1, 15, 10, 30, 45)
 

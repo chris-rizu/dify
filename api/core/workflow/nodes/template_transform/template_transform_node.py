@@ -3,8 +3,8 @@ from collections.abc import Mapping, Sequence
 from typing import Any, Optional
 
 from core.helper.code_executor.code_executor import CodeExecutionError, CodeExecutor, CodeLanguage
-from core.workflow.entities import NodeRunResult
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.template_transform.entities import TemplateTransformNodeData

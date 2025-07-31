@@ -26,8 +26,9 @@ from core.prompt.entities.advanced_prompt_entities import ChatModelMessage, Comp
 from core.prompt.simple_prompt_transform import ModelMode
 from core.prompt.utils.prompt_message_util import PromptMessageUtil
 from core.variables.types import SegmentType
-from core.workflow.entities import NodeRunResult, VariablePool
+from core.workflow.entities import VariablePool
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.base.node import BaseNode
 from core.workflow.nodes.llm import ModelConfig, llm_utils

@@ -1,3 +1,5 @@
+from typing import TYPE_CHECKING
+
 from core.prompt.utils.prompt_template_parser import PromptTemplateParser
 from core.workflow.enums import ErrorStrategy, NodeType
 from core.workflow.nodes.answer.entities import (
@@ -8,6 +10,9 @@ from core.workflow.nodes.answer.entities import (
     VarGenerateRouteChunk,
 )
 from core.workflow.utils.variable_template_parser import VariableTemplateParser
+
+if TYPE_CHECKING:
+    from core.workflow.entities import GraphEdge
 
 
 class AnswerStreamGeneratorRouter:

@@ -32,11 +32,9 @@ from core.variables import (
     StringSegment,
 )
 from core.variables.segments import ArrayObjectSegment
-from core.workflow.entities import GraphInitParams, NodeRunResult
+from core.workflow.entities import GraphInitParams
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
-from core.workflow.events import (
-    ModelInvokeCompletedEvent,
-)
+from core.workflow.events import ModelInvokeCompletedEvent, NodeRunResult
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.knowledge_retrieval.template_prompts import (

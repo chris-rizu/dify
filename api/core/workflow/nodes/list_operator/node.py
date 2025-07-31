@@ -4,8 +4,8 @@ from typing import Any, Literal, Optional, Union
 from core.file import File
 from core.variables import ArrayFileSegment, ArrayNumberSegment, ArrayStringSegment
 from core.variables.segments import ArrayAnySegment, ArraySegment
-from core.workflow.entities import NodeRunResult
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 

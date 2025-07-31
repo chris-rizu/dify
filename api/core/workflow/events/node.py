@@ -1,13 +1,37 @@
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from datetime import datetime
-from typing import Optional
+from typing import Any, Optional
 
-from pydantic import Field
+from pydantic import BaseModel, Field
 
 from core.model_runtime.entities.llm_entities import LLMUsage
 from core.rag.entities.citation_metadata import RetrievalSourceMetadata
-from core.workflow.entities import AgentNodeStrategyInit, NodeRunResult
-from core.workflow.events.base import BaseNodeEvent, NodeEvent
+from core.workflow.entities.node_entities import AgentNodeStrategyInit
+from core.workflow.enums import WorkflowNodeExecutionMetadataKey, WorkflowNodeExecutionStatus
+
+from .base import BaseNodeEvent, NodeEvent
+
+
+class NodeRunResult(BaseModel):
+    """
+    Node Run Result.
+    """
+
+    status: WorkflowNodeExecutionStatus = WorkflowNodeExecutionStatus.RUNNING
+
+    inputs: Optional[Mapping[str, Any]] = None
+    process_data: Optional[Mapping[str, Any]] = None
+    outputs: Optional[Mapping[str, Any]] = None
+    metadata: Optional[Mapping[WorkflowNodeExecutionMetadataKey, Any]] = None
+    llm_usage: Optional[LLMUsage] = None
+
+    edge_source_handle: Optional[str] = None  # source handle id of node with multiple branches
+
+    error: Optional[str] = None
+    error_type: Optional[str] = None
+
+    # single step node run retry
+    retry_index: int = 0
 
 
 class NodeRunStartedEvent(BaseNodeEvent):

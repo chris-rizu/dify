@@ -5,7 +5,6 @@ from core.app.entities.app_invoke_entities import InvokeFrom
 from core.workflow.entities import (
     Graph,
     GraphRuntimeState,
-    NodeRunResult,
     VariablePool,
 )
 from core.workflow.enums import (
@@ -16,6 +15,7 @@ from core.workflow.events import (
     GraphRunPartialSucceededEvent,
     NodeRunExceptionEvent,
     NodeRunFailedEvent,
+    NodeRunResult,
     NodeRunStreamChunkEvent,
 )
 from core.workflow.events.node import RunCompletedEvent, RunStreamChunkEvent

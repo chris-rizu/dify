@@ -5,9 +5,9 @@ import pytest
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.tools.entities.tool_entities import ToolInvokeMessage, ToolProviderType
 from core.tools.errors import ToolInvokeError
-from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, NodeRunResult, VariablePool
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, VariablePool
 from core.workflow.enums import ErrorStrategy, WorkflowNodeExecutionStatus
-from core.workflow.events import RunCompletedEvent
+from core.workflow.events import NodeRunResult, RunCompletedEvent
 from core.workflow.nodes.answer.entities import AnswerStreamGenerateRoute
 from core.workflow.nodes.end.entities import EndStreamParam
 from core.workflow.nodes.tool import ToolNode

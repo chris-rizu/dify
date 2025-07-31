@@ -1,5 +1,10 @@
+from typing import TYPE_CHECKING
+
 from core.workflow.enums import NodeType
 from core.workflow.nodes.end.entities import EndNodeData, EndStreamParam
+
+if TYPE_CHECKING:
+    from core.workflow.entities import GraphEdge
 
 
 class EndStreamGeneratorRouter:

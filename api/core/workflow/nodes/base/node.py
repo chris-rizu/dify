@@ -9,9 +9,9 @@ from models.enums import UserFrom
 from models.workflow import WorkflowType
 
 if TYPE_CHECKING:
-    from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, NodeRunResult
+    from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState
     from core.workflow.enums import ErrorStrategy, NodeType
-    from core.workflow.events import InNodeEvent, NodeEvent
+    from core.workflow.events import InNodeEvent, NodeEvent, NodeRunResult
 
 logger = logging.getLogger(__name__)
 
@@ -62,9 +62,8 @@ class BaseNode:
         raise NotImplementedError
 
     def run(self) -> "Generator[Union[NodeEvent, InNodeEvent], None, None]":
-        from core.workflow.entities import NodeRunResult
         from core.workflow.enums import WorkflowNodeExecutionStatus
-        from core.workflow.events import RunCompletedEvent
+        from core.workflow.events import NodeRunResult, RunCompletedEvent
 
         try:
             result = self._run()

@@ -44,6 +44,7 @@ from core.workflow.events.node import (
     NodeInLoopFailedEvent,
     NodeRunExceptionEvent,
     NodeRunFailedEvent,
+    NodeRunResult,
     NodeRunRetrieverResourceEvent,
     NodeRunRetryEvent,
     NodeRunStartedEvent,
@@ -95,6 +96,7 @@ __all__ = [
     "NodeInLoopFailedEvent",
     "NodeRunExceptionEvent",
     "NodeRunFailedEvent",
+    "NodeRunResult",
     "NodeRunRetrieverResourceEvent",
     "NodeRunRetryEvent",
     # Node events

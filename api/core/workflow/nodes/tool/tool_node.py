@@ -14,10 +14,7 @@ from core.tools.tool_engine import ToolEngine
 from core.tools.utils.message_transformer import ToolFileMessageTransformer
 from core.variables.segments import ArrayAnySegment, ArrayFileSegment
 from core.variables.variables import ArrayAnyVariable
-from core.workflow.entities import (
-    NodeRunResult,
-    VariablePool,
-)
+from core.workflow.entities import VariablePool
 from core.workflow.enums import (
     ErrorStrategy,
     NodeType,
@@ -25,7 +22,7 @@ from core.workflow.enums import (
     WorkflowNodeExecutionMetadataKey,
     WorkflowNodeExecutionStatus,
 )
-from core.workflow.events import RunCompletedEvent, RunStreamChunkEvent
+from core.workflow.events import NodeRunResult, RunCompletedEvent, RunStreamChunkEvent
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.utils.variable_template_parser import VariableTemplateParser

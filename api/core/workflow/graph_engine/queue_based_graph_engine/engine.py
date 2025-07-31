@@ -15,12 +15,13 @@ from types import GeneratorType
 from typing import Any, Optional
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState, NodeRunResult
+from core.workflow.entities import Graph, GraphInitParams, GraphRuntimeState
 from core.workflow.events import (
     GraphEngineEvent,
     GraphRunFailedEvent,
     GraphRunStartedEvent,
     GraphRunSucceededEvent,
+    NodeRunResult,
     RunCompletedEvent,
 )
 from core.workflow.nodes import NodeType

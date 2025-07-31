@@ -4,8 +4,9 @@ from typing import TYPE_CHECKING, Any, Optional, TypeAlias
 from core.variables import SegmentType, Variable
 from core.workflow.constants import CONVERSATION_VARIABLE_NODE_ID
 from core.workflow.conversation_variable_updater import ConversationVariableUpdater
-from core.workflow.entities import GraphInitParams, NodeRunResult
+from core.workflow.entities import GraphInitParams
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 from core.workflow.nodes.variable_assigner.common import helpers as common_helpers

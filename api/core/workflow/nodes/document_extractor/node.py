@@ -25,8 +25,8 @@ from core.file import File, FileTransferMethod, file_manager
 from core.helper import ssrf_proxy
 from core.variables import ArrayFileSegment
 from core.variables.segments import ArrayStringSegment, FileSegment
-from core.workflow.entities import NodeRunResult
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.base.entities import BaseNodeData, RetryConfig
 

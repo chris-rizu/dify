@@ -50,11 +50,7 @@ from core.variables import (
     StringSegment,
 )
 from core.workflow.constants import SYSTEM_VARIABLE_NODE_ID
-from core.workflow.entities import (
-    GraphInitParams,
-    NodeRunResult,
-    VariablePool,
-)
+from core.workflow.entities import GraphInitParams, VariablePool
 from core.workflow.enums import (
     ErrorStrategy,
     NodeType,
@@ -66,6 +62,7 @@ from core.workflow.events import (
     InNodeEvent,
     ModelInvokeCompletedEvent,
     NodeEvent,
+    NodeRunResult,
     RunCompletedEvent,
     RunRetrieverResourceEvent,
     RunStreamChunkEvent,

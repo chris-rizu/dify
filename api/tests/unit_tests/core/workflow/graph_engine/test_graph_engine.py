@@ -8,7 +8,6 @@ from core.app.entities.app_invoke_entities import InvokeFrom
 from core.workflow.entities import (
     Graph,
     GraphRuntimeState,
-    NodeRunResult,
     RouteNodeState,
     VariablePool,
 )
@@ -22,6 +21,7 @@ from core.workflow.events import (
     GraphRunStartedEvent,
     GraphRunSucceededEvent,
     NodeRunFailedEvent,
+    NodeRunResult,
     NodeRunStartedEvent,
     NodeRunStreamChunkEvent,
     NodeRunSucceededEvent,

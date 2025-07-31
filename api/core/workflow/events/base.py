@@ -3,7 +3,7 @@ from typing import Any, Optional
 
 from pydantic import BaseModel, Field
 
-from core.workflow.entities import RouteNodeState
+# from core.workflow.entities import RouteNodeState  # Removed to avoid cycle imports
 from core.workflow.enums import NodeType
 
 
@@ -20,7 +20,8 @@ class BaseNodeEvent(GraphEngineEvent):
     node_id: str = Field(..., description="node id")
     node_type: NodeType = Field(..., description="node type")
     node_data: Any = Field(..., description="node data")  # Type: BaseNodeData from core.workflow.nodes.base.entities
-    route_node_state: RouteNodeState = Field(..., description="route node state")
+    route_node_state: Any = Field(..., description="route node state")
+    # Type: RouteNodeState from core.workflow.entities
     parallel_id: Optional[str] = None
     """parallel id if node is in parallel"""
     parallel_start_node_id: Optional[str] = None

@@ -2,8 +2,8 @@ from collections.abc import Mapping, Sequence
 from typing import Any, Optional, cast
 
 from core.variables import ArrayFileSegment, FileSegment
-from core.workflow.entities import NodeRunResult
 from core.workflow.enums import ErrorStrategy, NodeType, WorkflowNodeExecutionStatus
+from core.workflow.events import NodeRunResult
 from core.workflow.nodes.answer.answer_stream_generate_router import AnswerStreamGeneratorRouter
 from core.workflow.nodes.answer.entities import (
     AnswerNodeData,
